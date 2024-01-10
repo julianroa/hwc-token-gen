@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Generator</title>
+</head>
+<body>
+    <h1>Enter Account Attributes</h1>
+    <form method="post" action="/">
+        <label for="ak">Access Key:</label>
+        <input type="text" name="ak" required><br>
+
+        <label for="sk">Secret Key:</label>
+        <input type="text" name="sk" required><br>
+
+        <label for="username">Teannt Username:</label>
+        <input type="text" name="username" required><br>
+
+        <label for="iam_username">IAM Username:</label>
+        <input type="text" name="iam_username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br>
+
+        <label for="region">Region:</label>
+        <input type="text" name="region" required><br>
+
+        <input type="submit" value="Get Token">
+    </form>
+    {% if error_msg %}
+        <p>{{ error_msg }}</p>
+    {% endif %}
+</body>
+</html>
